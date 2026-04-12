@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Bloomfield brand colors */
+  --color-bloom-cream: var(--bloom-cream);
+  --color-bloom-cream-light: var(--bloom-cream-light);
+  --color-bloom-cream-dark: var(--bloom-cream-dark);
+  --color-bloom-slate: var(--bloom-slate);
+  --color-bloom-slate-light: var(--bloom-slate-light);
+  --color-bloom-sage: var(--bloom-sage);
+  --color-bloom-sage-light: var(--bloom-sage-light);
+  --color-bloom-brown: var(--bloom-brown);
+  --color-bloom-brown-light: var(--bloom-brown-light);
+  --color-bloom-gold: var(--bloom-gold);
+  --color-bloom-gold-light: var(--bloom-gold-light);
+
+  --font-display: "Cormorant Garamond Variable", "Georgia", serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Core */
+  --background: #F5F0DC;
+  --foreground: #5C4033;
+
+  /* Cards */
+  --card: #FAF7EC;
+  --card-foreground: #5C4033;
+
+  /* Popover */
+  --popover: #FDFBF4;
+  --popover-foreground: #5C4033;
+
+  /* Primary: slate blue */
+  --primary: #4A6B7A;
+  --primary-foreground: #F5F0DC;
+
+  /* Secondary: sage green */
+  --secondary: #8BAA7C;
+  --secondary-foreground: #FDFBF4;
+
+  /* Muted */
+  --muted: #EDE8D0;
+  --muted-foreground: #8B7355;
+
+  /* Accent: gold */
+  --accent: #C4A35A;
+  --accent-foreground: #3D2B1F;
+
+  /* Destructive */
+  --destructive: #C45A5A;
+
+  /* Borders */
+  --border: #DDD5B8;
+  --input: #DDD5B8;
+  --ring: #4A6B7A;
+
+  /* Sidebar */
+  --sidebar: #4A6B7A;
+  --sidebar-foreground: #F5F0DC;
+  --sidebar-primary: #4A6B7A;
+  --sidebar-primary-foreground: #F5F0DC;
+  --sidebar-accent: #8BAA7C;
+  --sidebar-accent-foreground: #FDFBF4;
+  --sidebar-border: #3D5A68;
+  --sidebar-ring: #C4A35A;
+
+  /* Bloomfield brand tokens */
+  --bloom-cream: #F5F0DC;
+  --bloom-cream-light: #FAF7EC;
+  --bloom-cream-dark: #EDE8D0;
+  --bloom-slate: #4A6B7A;
+  --bloom-slate-light: #6A8B9A;
+  --bloom-sage: #8BAA7C;
+  --bloom-sage-light: #A8C49B;
+  --bloom-brown: #5C4033;
+  --bloom-brown-light: #8B7355;
+  --bloom-gold: #C4A35A;
+  --bloom-gold-light: #D4B97A;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    font-family: "Inter Variable", "Inter", sans-serif;
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bloom-cream-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bloom-slate);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bloom-slate-light);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
