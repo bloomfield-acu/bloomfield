@@ -49,7 +49,7 @@ export function Navbar() {
           >
             <img src={asset("Logo.png")} alt="Bloomfield" className="h-10 w-auto" />
             <span className="font-display text-2xl font-semibold tracking-wide text-bloom-brown">
-              Bloomfield
+              Bloomfield Acupuncture
             </span>
           </a>
 
