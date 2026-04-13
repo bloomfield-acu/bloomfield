@@ -40,6 +40,32 @@ export const SERVICES = [
     description:
       "Thin needles less than half of a millimeter thick are placed into the body to release endorphins and neurotransmitters, improve blood circulation, and take the body from a sympathetic state to a parasympathetic state.",
     icon: "Crosshair" as const,
+    detail: {
+      metaTitle: "Acupuncture in Hyde Park Chicago | Natural Pain & Stress Relief",
+      metaDescription: "Targeted acupuncture for back, neck, shoulder, knee, and joint pain in Hyde Park, Chicago and Frankfort, IL. Natural, drug-free relief with Dr. Anna Bloomfield.",
+      fullDescription:
+        "Acupuncture is the foundation of our practice. Using thin, sterile needles — less than half a millimeter thick — Dr. Bloomfield stimulates specific points along the body's meridians to release endorphins and neurotransmitters, improve blood circulation, and shift the body from a sympathetic (fight-or-flight) state to a parasympathetic (rest-and-heal) state. Techniques include Master Tung's points, Five Element acupuncture, Yin Yang theory, and Motor Entry Point (MEP) needling.",
+      conditions: [
+        "Back pain & sciatica",
+        "Neck & shoulder pain",
+        "Knee & joint pain",
+        "Migraines & headaches",
+        "Sports & work injuries",
+        "Muscle strains & tendonitis",
+        "Stress & anxiety",
+        "Insomnia & sleep issues",
+        "Digestive disorders",
+        "Fertility support",
+      ],
+      benefits: [
+        "Drug-free pain relief",
+        "Reduced inflammation",
+        "Improved circulation",
+        "Nervous system regulation",
+        "Faster injury recovery",
+        "Better sleep quality",
+      ],
+    },
   },
   {
     id: "herbalism",
@@ -47,6 +73,30 @@ export const SERVICES = [
     description:
       "One of the oldest forms of medicine — modern research enables herbalists to prescribe herbs compatible with your natural biome and any pharmaceuticals you may be taking.",
     icon: "Leaf" as const,
+    detail: {
+      metaTitle: "Chinese Herbal Medicine in Hyde Park Chicago | Bloomfield Acupuncture",
+      metaDescription: "Custom herbal formulas in Hyde Park, Chicago. Board-certified herbalist Dr. Anna Bloomfield prescribes herbs compatible with your biome and medications.",
+      fullDescription:
+        "Herbalism is one of the oldest forms of medicine, with evidence showing humans have used plants as medicine for tens of thousands of years. Modern research enables Dr. Bloomfield — a board-certified herbalist — to prescribe herbs that are compatible with your natural biome and any pharmaceuticals you may be taking. Each formula is custom-blended to address your specific health concerns.",
+      conditions: [
+        "Digestive issues & bloating",
+        "Hormonal imbalances",
+        "Seasonal allergies",
+        "Immune support",
+        "Stress & adrenal fatigue",
+        "Skin conditions",
+        "Menstrual irregularities",
+        "Chronic fatigue",
+      ],
+      benefits: [
+        "Personalized formulas",
+        "Safe with medications",
+        "Addresses root causes",
+        "Supports long-term healing",
+        "Natural & plant-based",
+        "Complements acupuncture",
+      ],
+    },
   },
   {
     id: "cupping",
@@ -54,6 +104,28 @@ export const SERVICES = [
     description:
       "Cups are placed over the skin to create suction, stimulating blood flow, relieving muscle tension, promoting healing, and removing pathogens from the body.",
     icon: "Circle" as const,
+    detail: {
+      metaTitle: "Cupping Therapy in Hyde Park Chicago | Bloomfield Acupuncture",
+      metaDescription: "Cupping therapy in Hyde Park, Chicago for muscle tension, pain relief, and faster recovery. Book with Dr. Anna Bloomfield today.",
+      fullDescription:
+        "Cups are placed over the skin to create suction, drawing blood to the surface to stimulate circulation, release deep muscle tension, promote healing, and help remove pathogens from the body. Cupping is especially effective for athletes, desk workers, and anyone dealing with chronic tightness or pain. Sessions are often combined with acupuncture for enhanced results.",
+      conditions: [
+        "Chronic muscle tension",
+        "Back & shoulder tightness",
+        "Sports recovery",
+        "Respiratory issues",
+        "Poor circulation",
+        "Chronic pain",
+      ],
+      benefits: [
+        "Deep muscle release",
+        "Improved blood flow",
+        "Reduced inflammation",
+        "Toxin removal",
+        "Faster recovery time",
+        "Relaxation & stress relief",
+      ],
+    },
   },
   {
     id: "gua-sha",
@@ -61,6 +133,28 @@ export const SERVICES = [
     description:
       "Scraping the skin with a smooth-edged tool to promote blood circulation, release muscle tension, and boost lymphatic drainage for whole-body wellness.",
     icon: "Hand" as const,
+    detail: {
+      metaTitle: "Gua Sha Treatment in Hyde Park Chicago | Bloomfield Acupuncture",
+      metaDescription: "Professional gua sha therapy in Hyde Park, Chicago. Release muscle tension, boost circulation, and support lymphatic drainage with Dr. Anna Bloomfield.",
+      fullDescription:
+        "Gua sha involves scraping the skin with a smooth-edged tool to promote blood circulation, release muscle tension, and boost lymphatic drainage. This technique helps break up fascial adhesions and stimulates the body's natural healing response. It's particularly effective for chronic pain, muscle stiffness, and supporting the immune system.",
+      conditions: [
+        "Neck & shoulder stiffness",
+        "Chronic pain",
+        "Muscle knots & adhesions",
+        "Headaches & migraines",
+        "Cold & flu symptoms",
+        "Inflammation",
+      ],
+      benefits: [
+        "Fascial release",
+        "Lymphatic drainage",
+        "Improved range of motion",
+        "Immune system support",
+        "Reduced muscle soreness",
+        "Enhanced circulation",
+      ],
+    },
   },
   {
     id: "bodywork",
@@ -68,6 +162,28 @@ export const SERVICES = [
     description:
       "Hands-on therapeutic techniques including muscle energy methods to relieve tension, restore mobility, and complement your acupuncture treatments.",
     icon: "Zap" as const,
+    detail: {
+      metaTitle: "Therapeutic Bodywork in Hyde Park Chicago | Bloomfield Acupuncture",
+      metaDescription: "Therapeutic bodywork and muscle energy techniques in Hyde Park, Chicago. Restore mobility and relieve tension with Dr. Anna Bloomfield.",
+      fullDescription:
+        "Dr. Bloomfield incorporates hands-on therapeutic bodywork techniques including muscle energy methods to relieve tension, restore mobility, and complement your acupuncture treatments. These techniques are particularly effective for structural imbalances, restricted range of motion, and chronic pain patterns that benefit from a manual therapy approach.",
+      conditions: [
+        "Limited range of motion",
+        "Postural imbalances",
+        "Chronic muscle tension",
+        "Joint stiffness",
+        "Repetitive strain injuries",
+        "Post-surgical recovery",
+      ],
+      benefits: [
+        "Restored mobility",
+        "Structural rebalancing",
+        "Pain pattern interruption",
+        "Complements acupuncture",
+        "Improved posture",
+        "Tension relief",
+      ],
+    },
   },
   {
     id: "nutrition",
@@ -75,6 +191,28 @@ export const SERVICES = [
     description:
       "Personalized dietary guidelines rooted in Chinese medicine principles, tailored to support your constitution and health goals from the inside out.",
     icon: "Flame" as const,
+    detail: {
+      metaTitle: "Nutritional Counseling in Hyde Park Chicago | Bloomfield Acupuncture",
+      metaDescription: "Personalized dietary guidelines rooted in Chinese medicine in Hyde Park, Chicago. Support your health goals from the inside out with Dr. Anna Bloomfield.",
+      fullDescription:
+        "Nutrition in Chinese medicine is about more than just calories — it's about eating according to your unique constitution, the seasons, and your current health needs. Dr. Bloomfield provides personalized dietary guidelines that work alongside your acupuncture and herbal treatments to support healing from the inside out.",
+      conditions: [
+        "Digestive disorders",
+        "Low energy & fatigue",
+        "Weight management",
+        "Inflammation",
+        "Food sensitivities",
+        "Hormonal imbalances",
+      ],
+      benefits: [
+        "Constitution-based approach",
+        "Supports treatment outcomes",
+        "Sustainable changes",
+        "Seasonal eating guidance",
+        "Whole-body nourishment",
+        "Integrates with other therapies",
+      ],
+    },
   },
 ] as const;
 

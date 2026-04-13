@@ -38,17 +38,15 @@ export function Hero() {
       <div className="relative grid h-full w-full grid-cols-1 items-center lg:grid-cols-2">
         {/* Text content */}
         <div className="z-10 px-8 lg:pl-16 xl:pl-24 2xl:pl-32 lg:pr-8">
-          <motion.div
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="mb-6"
-          >
-            <img
-              src="/Logo.png"
-              alt="Bloomfield Acupuncture"
-              className="h-36 w-auto drop-shadow-lg lg:h-44"
-            />
-          </motion.div>
+          <div className="mb-6">
+            <div className="animate-float p-1">
+              <img
+                src="/Logo.png"
+                alt="Bloomfield Acupuncture"
+                className="h-36 w-auto lg:h-44"
+              />
+            </div>
+          </div>
 
           <motion.h1
             custom={0}
@@ -70,6 +68,8 @@ export function Hero() {
             className="mt-3 text-lg tracking-wide text-bloom-brown-light"
           >
             Licensed Acupuncturist &middot; Board Certified Herbalist
+            <br />
+            <span className="text-base text-bloom-brown-light/70">Hyde Park, Chicago &middot; Frankfort, IL</span>
           </motion.p>
 
           <motion.div

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { Crosshair, Leaf, Hand, Zap, Flame, Circle } from "lucide-react";
+import { Link } from "react-router";
+import { Crosshair, Leaf, Hand, Zap, Flame, Circle, ArrowRight } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
 import { OrganicBlob } from "@/components/decorative/OrganicBlob";
 import { cn } from "@/lib/utils";
@@ -94,6 +95,13 @@ export function Services() {
                   <p className="mt-2 text-sm leading-relaxed text-bloom-brown-light">
                     {service.description}
                   </p>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-bloom-slate transition-colors hover:text-bloom-brown"
+                  >
+                    Explore
+                    <ArrowRight className="size-3.5" />
+                  </Link>
                 </div>
               </motion.div>
             );

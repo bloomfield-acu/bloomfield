@@ -20,7 +20,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-bloom-cream/70">
-              Experience the healing power of acupuncture and Chinese medicine. Compassionate, whole-person care in a warm, welcoming environment.
+              Acupuncture and herbal medicine in Hyde Park, Chicago and Frankfort, IL. Compassionate, whole-person care in a warm, welcoming environment.
             </p>
           </div>
 

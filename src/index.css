@@ -55,27 +55,27 @@
   --radius: 0.75rem;
 
   /* Core */
-  --background: #F5F0DC;
+  --background: #EDE3BA;
   --foreground: #5C4033;
 
   /* Cards */
-  --card: #FAF7EC;
+  --card: #F5EDD0;
   --card-foreground: #5C4033;
 
   /* Popover */
-  --popover: #FDFBF4;
+  --popover: #F7F0D8;
   --popover-foreground: #5C4033;
 
   /* Primary: slate blue */
   --primary: #4A6B7A;
-  --primary-foreground: #F5F0DC;
+  --primary-foreground: #EDE3BA;
 
   /* Secondary: sage green */
   --secondary: #8BAA7C;
-  --secondary-foreground: #FDFBF4;
+  --secondary-foreground: #F7F0D8;
 
   /* Muted */
-  --muted: #EDE8D0;
+  --muted: #E5DABA;
   --muted-foreground: #8B7355;
 
   /* Accent: gold */
@@ -86,24 +86,24 @@
   --destructive: #C45A5A;
 
   /* Borders */
-  --border: #DDD5B8;
-  --input: #DDD5B8;
+  --border: #D8CEAA;
+  --input: #D8CEAA;
   --ring: #4A6B7A;
 
   /* Sidebar */
   --sidebar: #4A6B7A;
-  --sidebar-foreground: #F5F0DC;
+  --sidebar-foreground: #EDE3BA;
   --sidebar-primary: #4A6B7A;
-  --sidebar-primary-foreground: #F5F0DC;
+  --sidebar-primary-foreground: #EDE3BA;
   --sidebar-accent: #8BAA7C;
-  --sidebar-accent-foreground: #FDFBF4;
+  --sidebar-accent-foreground: #F7F0D8;
   --sidebar-border: #3D5A68;
   --sidebar-ring: #C4A35A;
 
   /* Bloomfield brand tokens */
-  --bloom-cream: #F5F0DC;
-  --bloom-cream-light: #FAF7EC;
-  --bloom-cream-dark: #EDE8D0;
+  --bloom-cream: #EDE3BA;
+  --bloom-cream-light: #F5EDD0;
+  --bloom-cream-dark: #E5DABA;
   --bloom-slate: #4A6B7A;
   --bloom-slate-light: #6A8B9A;
   --bloom-sage: #8BAA7C;
@@ -122,6 +122,16 @@
     font-family: "Inter Variable", "Inter", sans-serif;
     @apply bg-background text-foreground antialiased;
   }
+}
+
+/* Float animation — GPU-accelerated */
+@keyframes float {
+  0%, 100% { transform: translateY(3px); }
+  50% { transform: translateY(-3px); }
+}
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* Scrollbar */

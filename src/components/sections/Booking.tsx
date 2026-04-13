@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { MapPin, Calendar, Phone, Navigation, ChevronDown, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { OrganicBlob } from "@/components/decorative/OrganicBlob";
@@ -154,49 +154,47 @@ export function Booking() {
               </button>
             </div>
 
-            <AnimatePresence>
-              {openDirections.has(0) && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <div className="mt-6 space-y-4">
-                    <div className="overflow-hidden rounded-xl border border-bloom-gold/15">
-                      <iframe
-                        title="Hyde Park location"
-                        src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${DIRECTIONS[0].mapQuery}`}
-                        width="100%"
-                        height="280"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                      />
-                    </div>
-                    <div className="rounded-xl border border-bloom-gold/15 bg-bloom-cream p-5">
-                      <p className="text-sm leading-relaxed text-bloom-brown-light">
-                        {DIRECTIONS[0].text}
-                      </p>
-                      <div className="mt-4 flex items-center gap-3">
-                        <CopyAddressButton address={DIRECTIONS[0].fullAddress} />
-                        <a
-                          href={`https://www.google.com/maps/dir/?api=1&destination=${DIRECTIONS[0].mapQuery}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 rounded-lg border border-bloom-gold/20 bg-bloom-cream-light px-3 py-1.5 text-xs text-bloom-brown-light transition-colors hover:border-bloom-gold/40 hover:text-bloom-brown"
-                        >
-                          <Navigation className="size-3.5" />
-                          Get directions
-                        </a>
-                      </div>
+            {/* Always-rendered directions — CSS collapse instead of mount/unmount */}
+            <div
+              className="grid transition-[grid-template-rows,opacity] duration-300"
+              style={{
+                gridTemplateRows: openDirections.has(0) ? "1fr" : "0fr",
+                opacity: openDirections.has(0) ? 1 : 0,
+              }}
+            >
+              <div className="overflow-hidden">
+                <div className="mt-6 space-y-4">
+                  <div className="overflow-hidden rounded-xl border border-bloom-gold/15">
+                    <iframe
+                      title="Hyde Park location"
+                      src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${DIRECTIONS[0].mapQuery}`}
+                      width="100%"
+                      height="280"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                  <div className="rounded-xl border border-bloom-gold/15 bg-bloom-cream p-5">
+                    <p className="text-sm leading-relaxed text-bloom-brown-light">
+                      {DIRECTIONS[0].text}
+                    </p>
+                    <div className="mt-4 flex items-center gap-3">
+                      <CopyAddressButton address={DIRECTIONS[0].fullAddress} />
+                      <a
+                        href={`https://www.google.com/maps/dir/?api=1&destination=${DIRECTIONS[0].mapQuery}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 rounded-lg border border-bloom-gold/20 bg-bloom-cream-light px-3 py-1.5 text-xs text-bloom-brown-light transition-colors hover:border-bloom-gold/40 hover:text-bloom-brown"
+                      >
+                        <Navigation className="size-3.5" />
+                        Get directions
+                      </a>
                     </div>
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Frankfort */}
@@ -255,49 +253,46 @@ export function Booking() {
               </button>
             </div>
 
-            <AnimatePresence>
-              {openDirections.has(1) && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <div className="mt-6 space-y-4">
-                    <div className="overflow-hidden rounded-xl border border-bloom-gold/15">
-                      <iframe
-                        title="Frankfort location"
-                        src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${DIRECTIONS[1].mapQuery}`}
-                        width="100%"
-                        height="280"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                      />
-                    </div>
-                    <div className="rounded-xl border border-bloom-gold/15 bg-bloom-cream p-5">
-                      <p className="text-sm leading-relaxed text-bloom-brown-light">
-                        {DIRECTIONS[1].text}
-                      </p>
-                      <div className="mt-4 flex items-center gap-3">
-                        <CopyAddressButton address={DIRECTIONS[1].fullAddress} />
-                        <a
-                          href={`https://www.google.com/maps/dir/?api=1&destination=${DIRECTIONS[1].mapQuery}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 rounded-lg border border-bloom-gold/20 bg-bloom-cream-light px-3 py-1.5 text-xs text-bloom-brown-light transition-colors hover:border-bloom-gold/40 hover:text-bloom-brown"
-                        >
-                          <Navigation className="size-3.5" />
-                          Get directions
-                        </a>
-                      </div>
+            <div
+              className="grid transition-[grid-template-rows,opacity] duration-300"
+              style={{
+                gridTemplateRows: openDirections.has(1) ? "1fr" : "0fr",
+                opacity: openDirections.has(1) ? 1 : 0,
+              }}
+            >
+              <div className="overflow-hidden">
+                <div className="mt-6 space-y-4">
+                  <div className="overflow-hidden rounded-xl border border-bloom-gold/15">
+                    <iframe
+                      title="Frankfort location"
+                      src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${DIRECTIONS[1].mapQuery}`}
+                      width="100%"
+                      height="280"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                  <div className="rounded-xl border border-bloom-gold/15 bg-bloom-cream p-5">
+                    <p className="text-sm leading-relaxed text-bloom-brown-light">
+                      {DIRECTIONS[1].text}
+                    </p>
+                    <div className="mt-4 flex items-center gap-3">
+                      <CopyAddressButton address={DIRECTIONS[1].fullAddress} />
+                      <a
+                        href={`https://www.google.com/maps/dir/?api=1&destination=${DIRECTIONS[1].mapQuery}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 rounded-lg border border-bloom-gold/20 bg-bloom-cream-light px-3 py-1.5 text-xs text-bloom-brown-light transition-colors hover:border-bloom-gold/40 hover:text-bloom-brown"
+                      >
+                        <Navigation className="size-3.5" />
+                        Get directions
+                      </a>
                     </div>
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
