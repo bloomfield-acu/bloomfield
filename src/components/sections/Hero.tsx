@@ -43,7 +43,7 @@ export function Hero() {
             <img
               src={asset("Logo.png")}
               alt="Bloomfield Acupuncture"
-              className="h-[clamp(5rem,10vw,11rem)] w-auto"
+              className="h-[clamp(7rem,14vh,11rem)] w-auto"
             />
           </div>
 
