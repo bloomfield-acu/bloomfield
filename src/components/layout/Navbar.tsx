@@ -40,12 +40,12 @@ export function Navbar() {
             : "bg-transparent"
         )}
       >
-        <nav className="mx-auto flex items-center justify-between px-8 py-4 lg:px-16 xl:px-24 2xl:px-32">
+        <nav className="mx-auto grid grid-cols-[1fr_auto_1fr] items-center px-8 py-4 lg:px-16 xl:px-24 2xl:px-32">
           {/* Logo */}
           <a
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 justify-self-start"
           >
             <img src={asset("Logo.png")} alt="Bloomfield" className="h-9 w-auto md:h-10" />
             <span className="font-display text-lg font-semibold leading-tight tracking-wide text-bloom-brown md:text-xl lg:text-2xl">
@@ -54,7 +54,7 @@ export function Navbar() {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden items-center gap-1 md:flex">
+          <div className="hidden items-center gap-1 justify-self-center md:flex">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.href}
@@ -80,7 +80,7 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <Button
-            className="hidden px-4 py-3 text-sm font-semibold tracking-wide md:inline-flex xl:px-8 xl:py-5 xl:text-base"
+            className="hidden px-4 py-3 text-sm font-semibold tracking-wide justify-self-end md:inline-flex xl:px-8 xl:py-5 xl:text-base"
             size="lg"
             onClick={() => handleNavClick("#booking")}
           >
@@ -90,7 +90,7 @@ export function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="relative z-50 p-2 md:hidden"
+            className="relative z-50 col-start-3 row-start-1 justify-self-end p-2 md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
