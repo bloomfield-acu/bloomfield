@@ -40,13 +40,11 @@ export function Hero() {
         {/* Text content */}
         <div className="z-10 px-8 lg:pl-16 xl:pl-24 2xl:pl-32 lg:pr-8">
           <div className="mb-6 hidden sm:block">
-            <div className="animate-float p-1">
-              <img
-                src={asset("Logo.png")}
-                alt="Bloomfield Acupuncture"
-                className="h-[clamp(5rem,10vw,11rem)] w-auto"
-              />
-            </div>
+            <img
+              src={asset("Logo.png")}
+              alt="Bloomfield Acupuncture"
+              className="h-[clamp(5rem,10vw,11rem)] w-auto"
+            />
           </div>
 
           <motion.h1
