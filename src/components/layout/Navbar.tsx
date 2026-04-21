@@ -60,7 +60,7 @@ export function Navbar() {
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
                 className={cn(
-                  "relative px-4 py-2 text-sm tracking-wide transition-colors",
+                  "relative px-2 py-2 text-sm tracking-wide transition-colors xl:px-4",
                   activeId === item.href.slice(1)
                     ? "text-bloom-slate"
                     : "text-bloom-brown-light hover:text-bloom-brown"
