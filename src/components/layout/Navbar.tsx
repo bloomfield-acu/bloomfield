@@ -47,14 +47,14 @@ export function Navbar() {
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className="flex items-center gap-3"
           >
-            <img src={asset("Logo.png")} alt="Bloomfield" className="h-10 w-auto" />
-            <span className="font-display text-2xl font-semibold tracking-wide text-bloom-brown">
+            <img src={asset("Logo.png")} alt="Bloomfield" className="h-9 w-auto md:h-10" />
+            <span className="whitespace-nowrap font-display text-lg font-semibold tracking-wide text-bloom-brown md:text-base lg:text-xl xl:text-2xl">
               Bloomfield Acupuncture
             </span>
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden items-center gap-1 lg:flex">
+          <div className="hidden items-center gap-1 md:flex">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.href}
@@ -80,7 +80,7 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <Button
-            className="hidden px-8 py-5 text-base font-semibold tracking-wide lg:inline-flex"
+            className="hidden px-8 py-5 text-base font-semibold tracking-wide md:inline-flex"
             size="lg"
             onClick={() => handleNavClick("#booking")}
           >
@@ -90,7 +90,7 @@ export function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="relative z-50 p-2 lg:hidden"
+            className="relative z-50 p-2 md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
@@ -110,7 +110,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-bloom-cream/98 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-bloom-cream/98 backdrop-blur-sm md:hidden"
           >
             <nav className="flex flex-col items-center gap-2">
               {NAV_ITEMS.map((item, i) => (
