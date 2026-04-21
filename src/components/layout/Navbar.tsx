@@ -80,7 +80,7 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <Button
-            className="hidden px-8 py-5 text-base font-semibold tracking-wide md:inline-flex"
+            className="hidden px-4 py-3 text-sm font-semibold tracking-wide md:inline-flex xl:px-8 xl:py-5 xl:text-base"
             size="lg"
             onClick={() => handleNavClick("#booking")}
           >
