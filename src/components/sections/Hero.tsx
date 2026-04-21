@@ -39,7 +39,7 @@ export function Hero() {
       <div className="relative grid h-full w-full grid-cols-1 items-center lg:grid-cols-2">
         {/* Text content */}
         <div className="z-10 px-8 lg:pl-16 xl:pl-24 2xl:pl-32 lg:pr-8">
-          <div className="mb-6 hidden lg:block">
+          <div className="mb-6 hidden [@media(min-height:700px)]:block">
             <img
               src={asset("Logo.png")}
               alt="Bloomfield Acupuncture"
