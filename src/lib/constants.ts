@@ -262,7 +262,7 @@ export const FAQ_ITEMS = [
   {
     question: "Do you accept insurance?",
     answer:
-      "We will accept BlueCross BlueShield insurance in summer 2026. Currently, we are an out-of-network provider and require payment at the time of service. We are in the process of getting paneled by Optum as well.",
+      "We accept BlueCross BlueShield insurance. For other insurers, we are an out-of-network provider and require payment at the time of service. We are in the process of getting paneled by Optum as well.",
   },
   {
     question: "Does acupuncture hurt?",
