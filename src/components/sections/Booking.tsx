@@ -130,7 +130,7 @@ export function Booking() {
 
             <div className="mt-5 flex items-center gap-2 text-sm text-bloom-sage">
               <Calendar className="size-4" />
-              <span className="font-medium">Tuesdays & Wednesdays</span>
+              <span className="font-medium">Tuesdays, Wednesdays & Thursdays</span>
             </div>
 
             <p className="mt-4 leading-relaxed text-bloom-brown-light">
